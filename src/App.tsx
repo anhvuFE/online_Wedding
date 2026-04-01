@@ -39,7 +39,7 @@ export default function App() {
     <ConfigProvider theme={antdTheme}>
       {/* Audio element lives here so MusicPlayer can control it */}
       <audio ref={audioRef} loop preload="auto" id="bg-music">
-        <source src="/music/beautiful-in-white.mp3" type="audio/mpeg" />
+        <source src={`${import.meta.env.BASE_URL}music/beautiful-in-white.mp3`} type="audio/mpeg" />
       </audio>
 
       <AnimatePresence>
