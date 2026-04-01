@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rose-50: #fff1f2;
+  --color-rose-100: #ffe4e6;
+  --color-rose-200: #fecdd3;
+  --color-rose-300: #fda4af;
+  --color-rose-400: #fb7185;
+  --color-rose-500: #f43f5e;
+  --color-rose-600: #e11d48;
+  --color-rose-gold: #b76e79;
+  --color-rose-gold-light: #d4a0a7;
+  --color-rose-gold-dark: #8e4a52;
+  --color-blush: #fdf2f4;
+  --color-cream: #fffbf7;
+  --color-ivory: #fefcf9;
+  --color-champagne: #f7f0e8;
+  --color-warm-gray: #6b5c5e;
+  --color-warm-gray-light: #9a8c8e;
+  --color-warm-gray-dark: #4a3f41;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Lato', 'Helvetica Neue', sans-serif;
+  --font-script: 'Great Vibes', cursive;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-cream);
+    color: #3d3032;
+  }
+
+  ::selection {
+    background: rgba(183, 110, 121, 0.2);
+  }
+}
+
+@layer components {
+  .section-title {
+    font-family: var(--font-serif);
+    @apply text-4xl md:text-5xl text-center mb-3 text-warm-gray-dark;
+  }
+
+  .section-subtitle {
+    @apply text-center text-warm-gray-light text-base md:text-lg max-w-lg mx-auto mb-10;
+  }
+
+  .gold-divider {
+    @apply w-16 h-px mx-auto my-6;
+    background: linear-gradient(to right, transparent, var(--color-rose-gold-light), transparent);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(183, 110, 121, 0.25);
+  border-radius: 999px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Lato:wght@300;400;700&family=Great+Vibes&display=swap');
